@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>หมอลำใกล้ฉัน</title>
+  <link rel="icon" type="image/x-icon" href="icons8-home-69.png" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+  <!-- SEO Meta Tags -->
+  <meta name="keywords"
+    content="แผนที่เหมืองใกล้ฉัน, แผนที่เหมืองในประเทศไทย, พื้นที่ศักยภาพในการทำเหมือง, เหมืองในประเทศไทย" />
+  <meta name="author" content="วิศรุต แสนคำ/PI" />
+
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="แผนที่เหมืองใกล้ฉัน" />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="cover.png" />
+  <meta property="og:description" content="แผนที่เหมืองใกล้ฉัน" />
+</head>
+
+<body>
+  <button id="locate-btn" aria-label="ค้นหาหมอลำใกล้ฉัน">❤️ คลิกเพื่อ - ค้นหาว่ามีหมอลำที่ไหนใกล้ๆ คุณ 🔊🥁</button>
+  <section id="description">
+    <h2>แผนที่หมอลำใกล้ฉัน</h2>
+    <p>แผนที่นี้แสดงจุดที่มีหมอลำกำลังทำการแสดงหรือเริ่มทำการแสดงในบริเวณใกล้เคียง</p>
+  </section>
+  <div id="map" role="application" aria-label="แผนที่หมอลำใกล้ฉัน"></div>
+  <img src="Pi-Logo.svg" id="logo" alt="หมอลำใกล้ฉัน Logo" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

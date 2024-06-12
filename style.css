@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap");
+
+:root {
+  --text-color: rgb(255, 0, 0);
+  --background-color: #c6ae73;
+  --card-background-color: #45589c;
+  --shadow-color: black;
+  --content-width: 60%;
+  --text-color-main: #282828;
+  --h3-color-text: #7dad7d;
+  --hover-background-color: #b79a5c;
+  --main-font: "Noto Sans Thai", sans-serif;
+  --secondary-font: "IBM Plex Sans Thai", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--main-font), sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+#map {
+  height: 100vh;
+  width: 100%;
+}
+
+#locate-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: var(--card-background-color);
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+  color: white;
+}
+
+#locate-btn:hover {
+  background: var(--hover-background-color);
+}
+
+a {
+  color: var(--h3-color-text);
+  text-decoration: none;
+}
+
+#description {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999;
+  background: var(--card-background-color);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 90%;
+  width: 300px;
+  font-size: 12px;
+}
+
+#description h2 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+  color: var(--background-color);
+}
+
+#description p,
+#description ul {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+#description ul {
+  padding-left: 20px;
+}
+
+.leaflet-top.leaflet-left {
+  top: 150px;
+}
+
+.leaflet-interactive {
+  pointer-events: auto;
+}
+
+.leaflet-overlay-pane {
+  pointer-events: none;
+}
+
+.leaflet-marker-pane,
+.leaflet-shadow-pane,
+.leaflet-overlay-pane .leaflet-interactive,
+.leaflet-tile-pane {
+  pointer-events: auto;
+}
+
+#logo {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 1000;
+  width: 120px;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--h3-color-text);
+  color: white;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  #description {
+    bottom: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    max-width: none;
+    font-size: 14px;
+  }
+
+  #locate-btn {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #description {
+    font-size: 10px;
+  }
+
+  #locate-btn {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
